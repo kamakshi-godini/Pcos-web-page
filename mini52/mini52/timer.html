@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: bottom-right;
+  font-size: 20px;
+  margin-top: 0px;
+  color:crimson;
+  text-shadow: crimson;
+}
+.def{
+color: crimson;
+}
+.button{
+border:none;
+padding:15px 32px;
+text-align:center;
+text-decoration:none;
+display:inline-block;
+font-size:16px;
+margin:4px 2px;
+cursor:pointer;
+}
+.disabled{
+opacity:0.6;
+cursor:not-allowed;}
+div{
+width:300px;
+padding:50px;
+margin:50px;
+height:50px;}
+ body{
+                background-image:url("https://lolipharmainternational.com/wp-content/uploads/2020/09/PCOS-COPERTINA-980x551.png");
+/*background-repeat:repeat-x;*/
+            }
+            .coundownContainder{
+                position:relative;
+                margin:a;
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                background:linear-gradient(270deg,#051817,#0e3839);
+                height:180px;
+                width:350px;
+                color:cadetblue;
+                align-items: center;
+                text-shadow:1px 1px 1px;
+                border-radius: 15px;
+                border:2px solid silver;
+                box-shadow: 0 0 5px 25px;
+                font-size:150%;
+                
+            }
+</style>
+</head>
+<body>
+ <h1> <button type="button" class="button disabled" onclick="check1()" style="font-size:25px">MEDICINE</button>
+   <button type="button" class="button disabled" onclick="check2()" style="font-size:25px">DIET</button>
+   <button type="button" class="button disabled" onclick="check3()" style="font-size:25px">YOGA</button>
+    <button type="button" class="button disabled" onclick="check4()" style="font-size:25px">PREVENTIVE MEASURES</button>
+    <button type="button" class="button disabled" onclick="check5()" style="font-size:25px">EFFECTS AND SYMPTOMS</button><br> </h1>
+<div>
+<p style="color:black;text-align:center;font-size:40px;"><b>Enter Date When You get period in last time</b></p>
+</div>
+    <table class="coundownContainder" align="right">
+  <label for="mensuration" style="font-size:20px"><b>Select Date:</b></label>
+  <input type="date" id="dateInput" name="mensuration" 
+   style="font-size:20px">
+  <br>  <br><button type="button"  class="button disabled" onclick="countDown()" style="font-size:20px">Click for countdown!</button><br>
+    <tr>
+        <td colspan="4">Menstruration countdown</td>
+    </tr>
+    <tr>
+        <td id="days">00</td>
+        <td id="hrs">00</td>
+        <td id="min">00</td>
+        <td id="sec">00</td>
+    </tr>
+    <tr>
+    <td>Days</td>
+    <td>hrs</td>
+    <td>min</td>
+    <td>sec</td>
+    </tr>
+    <tr><td>left for next period</td></tr>
+</table>
+<p id="demo1"></p>
+<p id="demo"></p>
+
+  
+<script>
+// Set the date we're counting down to
+function countDown(){
+    var input=document.getElementById("dateInput").value;
+    var dt=new Date(input);
+    input=new Date(input);
+    dt.setMonth(input.getMonth()+1);
+    const month=dt.getMonth();
+    document.getElementById("demo1").innerHTML="Next Date is : "+dt;
+    document.getElementById("demo").innerHTML="Given Date is : "+input;
+
+var countDownDate = new Date(dt).getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+   
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("days").innerHTML = days
+  document.getElementById("hrs").innerHTML = hours
+  document.getElementById("min").innerHTML = minutes 
+  document.getElementById("sec").innerHTML = seconds ;
+  // If the count down is over, write some text 
+
+  if (distance <= 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED (do you get this month period)";
+    if(confirm("did you get this month period if yse press ok if not press cancel")){
+    alert("you are healthy");
+    }
+    else{
+   alert(" alert! you should take precautions") ;
+   }
+      }
+}, 1000);
+}
+
+</script>
+
+	<script>
+		
+			
+			function check1() {
+				
+				// Create anchor element.
+				var a = document.createElement('a');
+				
+				// Create the text node for anchor element.
+				var link = document.createTextNode("medicine");
+				
+				// Append the text node to anchor element.
+				//a.appendChild(link);
+				
+				// Set the title.
+				a.title = "medicine";
+				
+				// Set the href property.
+				window.open(
+				a.href = "file:///C:/Users/Kamakshi%20Godini/Desktop/mini52/mini52/medicine.html","_blank");
+				
+				
+				// Append the anchor element to the body.
+				document.body.appendChild(a);
+			}
+		</script>
+		<script>
+		
+			
+			function check2() {
+				
+				// Create anchor element.
+				var a = document.createElement('a');
+				
+				// Create the text node for anchor element.
+				var link = document.createTextNode("diet");
+				
+				// Append the text node to anchor element.
+				//a.appendChild(link);
+				
+				// Set the title.
+				a.title = "diet";
+				
+				// Set the href property.
+				window.open(
+				a.href = "file:///C:/Users/Kamakshi%20Godini/Desktop/mini52/mini52/diet.html","_blank");
+			
+				// Append the anchor element to the body.
+				document.body.appendChild(a);
+			}
+		</script>
+		
+			<script>
+			
+			function check3() {
+				
+				// Create anchor element.
+				var a = document.createElement('a');
+				
+				// Create the text node for anchor element.
+				var link = document.createTextNode("yoga ");
+				
+				// Append the text node to anchor element.
+				//a.appendChild(link);
+				
+				// Set the title.
+				a.title = "yoga";
+				
+				// Set the href property.
+				
+				window.open(
+				a.href = "file:///C:/Users/Kamakshi%20Godini/Desktop/mini52/mini52/YOGAAsanas(1).html","_blank");
+				
+				// Append the anchor element to the body.
+				document.body.appendChild(a);
+			}
+		</script>
+		
+		<script>	
+		<script>		
+				function check4() {
+				
+				// Create anchor element.
+				var a = document.createElement('a');
+				
+				// Create the text node for anchor element.
+				var link = document.createTextNode("preventive measures");
+				
+				// Append the text node to anchor element.
+				//a.appendChild(link);
+				
+				// Set the title.
+				a.title = "preventive measures";
+				
+				// Set the href property.
+				window.open(
+				a.href = "file:///C:/Users/Kamakshi%20Godini/Desktop/mini52/mini52/preventive.html","_blank");
+				
+				
+				// Append the anchor element to the body.
+				document.body.appendChild(a);
+			}
+		</script>
+			<script>
+				function check5() {
+				
+				// Create anchor element.
+				var a = document.createElement('a');
+				
+				// Create the text node for anchor element.
+				var link = document.createTextNode("effects and symptoms");
+				
+				// Append the text node to anchor element.
+				//a.appendChild(link);
+				
+				// Set the title.
+				a.title = "effects and symptoms";
+				
+				// Set the href property.
+				window.open(
+				a.href = "file:///C:/Users/Kamakshi%20Godini/Desktop/mini52/mini52/symptomsandeffects.html","_blank");
+				
+				
+				// Append the anchor element to the body.
+				document.body.appendChild(a);
+			}
+		</script>
+		
+		<h3>Polycystic ovary syndrome (PCOS) is a common condition that affects how a woman's ovaries work.
+		irregular periods – which means your ovaries do not regularly release eggs (ovulation)
+excess androgen – <br>
+high levels of "male" hormones in your body, which may cause physical signs such as excess facial or body hair
+polycystic ovaries – your ovaries become enlarged and contain many fluid-filled sacs (follicles) that surround the eggs (but despite the name, you do not actually have cysts if you have PCOS)</h3>
+		
+
+
+</body>
+</html>
